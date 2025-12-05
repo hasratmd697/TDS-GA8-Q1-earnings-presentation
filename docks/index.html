@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quarterly Earnings — Reveal.js</title>
+
+  <!-- Reveal.js from CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+
+  <!-- Syntax highlighting (highlight.js) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+
+  <!-- KaTeX (for math) or MathJax — Reveal.js supports MathJax; we'll use MathJax here -->
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+  <style>
+    /* Small custom styling */
+    .centered { text-align: center; }
+    .email { font-size: 0.9rem; opacity: 0.9; }
+    pre code { font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+
+<div class="reveal">
+  <div class="slides">
+
+    <!-- Title slide (HTML) -->
+    <section>
+      <h1>Quarterly Earnings Report — Q4</h1>
+      <p class="centered">Technical Consultant, Financial Systems</p>
+      <p class="centered email">Contact: 24f1002299@ds.study.iitm.ac.in</p>
+      <aside class="notes">Introduce yourself quickly. Mention the repository and that the slides are interactive (Reveal.js).</aside>
+    </section>
+
+    <!-- Markdown slide (demonstrates Markdown support) -->
+    <section data-markdown>
+      <script type="text/template">
+
+## Executive Summary
+
+- **Revenue:** Increased by 8% QoQ.
+- **Expenses:** Decreased by 2% QoQ due to automation.
+- **Net Income:** $1.2M — strong operational performance.
+
+> Key message: Continue investment in digital transformation.
+
+      </script>
+      <aside class="notes">Highlight the three bullet points and call out the recommendation.</aside>
+    </section>
+
+    <!-- Slide with animated fragments -->
+    <section>
+      <h2>Highlights</h2>
+      <ul>
+        <li class="fragment">Revenue growth led by product A</li>
+        <li class="fragment">Cost savings from infrastructure consolidation</li>
+        <li class="fragment">Improved customer retention metrics</li>
+      </ul>
+      <aside class="notes">Use fragments to reveal each highlight while speaking.</aside>
+    </section>
+
+    <!-- Slide with code sample and syntax highlighting -->
+    <section>
+      <h2>Data Extraction Script</h2>
+      <pre><code class="language-python"># sample: extract quarterly data from CSV
+import pandas as pd
+
+df = pd.read_csv('quarterly_results.csv')
+summary = df.groupby('product')['revenue'].sum().sort_values(ascending=False)
+print(summary.head())
+</code></pre>
+      <aside class="notes">Explain that this snippet is included for reproducibility; highlight which columns are required.</aside>
+    </section>
+
+    <!-- Slide with inline math (financial formula) -->
+    <section>
+      <h2>Financial Ratios</h2>
+      <p>We compute EBITDA margin as:</p>
+      <p>\[\text{EBITDA Margin} = \frac{\text{EBITDA}}{\text{Revenue}} \times 100\%\]</p>
+      <p>Weighted Average Cost of Capital (WACC):</p>
+      <p>\[\text{WACC} = \frac{E}{V}\cdot R_e + \frac{D}{V}\cdot R_d \cdot (1 - T_c)\]</p>
+      <aside class="notes">Walk through the formula components and why WACC matters for valuation.</aside>
+    </section>
+
+    <!-- Slide demonstrating nested fragments and a graph placeholder -->
+    <section>
+      <h2>Quarterly Trend</h2>
+      <p class="fragment">Revenue (Q1 → Q4): <span class="fragment">$4.2M → $4.5M → $4.7M → $5.0M</span></p>
+      <p class="fragment">Net Income (Q1 → Q4): <span class="fragment">$0.9M → $1.0M → $1.1M → $1.2M</span></p>
+      <div class="fragment">
+        <!-- Placeholder for an embedded chart or image -->
+        <p>Chart: (embed a generated chart image here)</p>
+      </div>
+      <aside class="notes">If presenting live, switch to the dashboard after this slide to show the interactive chart.</aside>
+    </section>
+
+    <!-- Slide with external link and publishing note -->
+    <section>
+      <h2>Distribution</h2>
+      <p>The slides are published on GitHub Pages. Use the URL below (replace USER and REPO):</p>
+      <p><code>https://[USER].github.io/[REPO]/</code></p>
+      <p>To force refresh cached content, append <code>?v=1</code>, <code>?v=2</code>, etc.</p>
+      <aside class="notes">Tell stakeholders where to find the live slides and how to refresh browser cache.</aside>
+    </section>
+
+    <!-- Closing slide -->
+    <section>
+      <h2>Questions</h2>
+      <p>Contact: <span class="email">24f1002299@ds.study.iitm.ac.in</span></p>
+      <aside class="notes">Open for Q&A; offer follow-up via email.</aside>
+    </section>
+
+  </div>
+</div>
+
+<!-- Reveal.js and plugins -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/markdown/markdown.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/highlight/highlight.min.js"></script>
+
+<script>
+  Reveal.initialize({
+    hash: true,
+    plugins: [ RevealMarkdown, RevealHighlight ],
+    slideNumber: true,
+    math: { mathjax: true },
+    // Optional: configure other options as needed
+  });
+</script>
+
+</body>
+</html>
